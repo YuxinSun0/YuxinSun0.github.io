@@ -21,17 +21,6 @@
 		<script>
     		let music = document.getElementById("music");
     		music.volume = 0;
-			
-			let cloud_textMsg = [];
-			
-			function textMsg() {
-				cloud_textMsg.push(document.getElementById('msg').value);
-				document.getElementById("msg1").innerHTML = cloud_textMsg[cloud_textMsg.length - 5];
-				document.getElementById("msg2").innerHTML = cloud_textMsg[cloud_textMsg.length - 4];
-				document.getElementById("msg3").innerHTML = cloud_textMsg[cloud_textMsg.length - 3];
-				document.getElementById("msg4").innerHTML = cloud_textMsg[cloud_textMsg.length - 2];
-				document.getElementById("msg5").innerHTML = cloud_textMsg[cloud_textMsg.length - 1];
-			}
 		</script>
 	    <p></p>
 		<h2>downloads:</h2>
@@ -69,21 +58,16 @@
 		<a href="https://onlinesequencer.net/3258409" target="_blank">Science Blaster by Spelling Phailer remade by yuxin: https://onlinesequencer.net/3258409</a>
 		<h2>links:</h2>
 		<a href="https://github.com/YuxinSun0/YuxinSun0.github.io" target="_blank">the github page for my webiste(this website): https://github.com/YuxinSun0/YuxinSun0.github.io</a>
-
+		<p></p>
+		<a href="https://www.programiz.com/python-programming/online-compiler/">online code compilers: https://www.programiz.com/python-programming/online-compiler/</a>
+		<p></p>
+		<a href="https://vscode.dev/">vs code online: https://vscode.dev/</a>
+		
 		<h2>other:</h2>
 		<pre>
 me and thomas have been doing modding and programming
 so if you got some good stuff that you can tell us about it
 dm me and friend me on discord my name and tag: Ysun #1057
 		</pre>
-		
-		<p>text messages(put your name before texting)</p>
-		<p id="msg1"></p>
-		<p id="msg2"></p>
-		<p id="msg3"></p>
-		<p id="msg4"></p>
-		<p id="msg5"></p>
-		<input id="msg">
-		<button onclick="textMsg()">send</button>
     </body>
 </html>
