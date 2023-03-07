@@ -7,13 +7,17 @@
     }
 </style>
 
-<audio controls loop id="music">
-    <source src="music.mp3">
-</audio>
-
 <script>
     var music = document.getElementById("music");
     music.volume = 0;
+	
+	function turnOnMusic() {
+		music.volume = 100;
+	}
+	
+	function turnMusicOff() {
+		music.volume = 0;
+	}
 </script>
 
 <html>
@@ -24,6 +28,14 @@
     </head>
 	
     <body>
+		<audio controls loop id="music">
+  		    <source src="music.mp3">
+		</audio>
+		
+		<button onclick="turnOnMusic()">turn on music</button>
+		<p></p>
+		<button onclick="turnMusicOff()">turn music off</button>
+		
 		<h2>downloads:</h2>
 		<a href="terraSun0.1.0.zip">terraSun 0.1.0</a>
 
