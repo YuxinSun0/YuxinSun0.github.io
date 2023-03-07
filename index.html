@@ -22,14 +22,15 @@
     		var music = document.getElementById("music");
     		music.volume = 0;
 			
+			
 			cloud_textMsg = [];
 			
 			function textMsg() {
 				cloud_textMsg.push(document.getElementById('msg').value);
-				document.getElementById("msg1").innerHTML = cloud_textMsg[cloud_textMsg.length - 1];
-				document.getElementById("msg2").innerHTML = cloud_textMsg[cloud_textMsg.length - 1];
-				document.getElementById("msg3").innerHTML = cloud_textMsg[cloud_textMsg.length - 1];
-				document.getElementById("msg4").innerHTML = cloud_textMsg[cloud_textMsg.length - 1];
+				document.getElementById("msg1").innerHTML = cloud_textMsg[cloud_textMsg.length - 5];
+				document.getElementById("msg2").innerHTML = cloud_textMsg[cloud_textMsg.length - 4];
+				document.getElementById("msg3").innerHTML = cloud_textMsg[cloud_textMsg.length - 3];
+				document.getElementById("msg4").innerHTML = cloud_textMsg[cloud_textMsg.length - 2];
 				document.getElementById("msg5").innerHTML = cloud_textMsg[cloud_textMsg.length - 1];
 			}
 		</script>
