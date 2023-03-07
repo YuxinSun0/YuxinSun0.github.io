@@ -21,6 +21,14 @@
 		<script>
     		var music = document.getElementById("music");
     		music.volume = 0;
+			
+			function turnOnMusic() {
+				music.volume = 100;
+			}
+			
+			function turnMusicOff() {
+				music.volume = 0;
+			}
 		</script>
 	    <p></p>
 		<button onclick="turnOnMusic()">turn on music</button>
