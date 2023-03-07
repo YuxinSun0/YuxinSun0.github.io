@@ -22,6 +22,8 @@
     		var music = document.getElementById("music");
     		music.volume = 0;
 			
+			cloud_textMsg = [];
+			
 			function textMsg() {
 				cloud_textMsg.push(document.getElementById('msg').value);
 				document.getElementById("msg1").innerHTML = cloud_textMsg[cloud_textMsg.length - 1];
