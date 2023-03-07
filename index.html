@@ -7,11 +7,6 @@
     }
 </style>
 
-<script>
-    var music = document.getElementById("music");
-    music.volume = 0;
-</script>
-
 <html>
     <head>
     	<h1>this is Ysun website remind ysun fix music</h1>
@@ -23,6 +18,10 @@
 		<audio controls loop id="music">
   		    <source src="music.mp3">
 		</audio>
+		<script>
+    		var music = document.getElementById("music");
+    		music.volume = 0;
+		</script>
 	    <p></p>
 		<button onclick="turnOnMusic()">turn on music</button>
 		<p></p>
