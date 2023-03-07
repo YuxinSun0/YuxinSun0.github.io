@@ -22,7 +22,11 @@
     		var music = document.getElementById("music");
     		music.volume = 0;
 			
-			var textMsg = document.getElementById('msg').value;
+			var cloud_textMsg = [];
+			
+			function textMsg() {
+				cloud_textMsg.push(document.getElementById('msg').value);
+			}
 		</script>
 	    <p></p>
 		<h2>downloads:</h2>
@@ -68,7 +72,8 @@ so if you got some good stuff that you can tell us about it
 dm me and friend me on discord my name and tag: Ysun #1057
 		</pre>
 		
-		<p>text messages</p>
+		<p>text messages(put your name before texting)</p>
 		<input id="msg">
+		<button>send</button>
     </body>
 </html>
