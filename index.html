@@ -26,11 +26,11 @@
 			
 			function textMsg() {
 				cloud_textMsg.push(document.getElementById('msg').value);
-				document.getElementById("msg1").innerHTML = cloud_textMsg[0];
-				document.getElementById("msg2").innerHTML = cloud_textMsg[1];
-				document.getElementById("msg3").innerHTML = cloud_textMsg[2];
-				document.getElementById("msg4").innerHTML = cloud_textMsg[3];
-				document.getElementById("msg5").innerHTML = cloud_textMsg[4];
+				document.getElementById("msg1").innerHTML = cloud_textMsg[cloud_textMsg.length - 1];
+				document.getElementById("msg2").innerHTML = cloud_textMsg[cloud_textMsg.length - 1];
+				document.getElementById("msg3").innerHTML = cloud_textMsg[cloud_textMsg.length - 1];
+				document.getElementById("msg4").innerHTML = cloud_textMsg[cloud_textMsg.length - 1];
+				document.getElementById("msg5").innerHTML = cloud_textMsg[cloud_textMsg.length - 1];
 			}
 		</script>
 	    <p></p>
