@@ -29,7 +29,7 @@
 				eval(document.getElementById("jsConsole").value);
 			 	amountJsLinesRan++;
 				if (amountJsLinesRan > 1) {
-					document.getElementById("jsConsoleOutput").innerHTML = "ran " + document.getElementById("jsConsole").value + ". " + amountJsLinesRan + " lines ran";
+					document.getElementById("jsConsoleOutput").innerHTML = "ran " + document.getElementById("jsConsole").value + ". " + amountJsLinesRan.toString() + " lines ran";
 				} else {
 					document.getElementById("jsConsoleOutput").innerHTML = "ran " + document.getElementById("jsConsole").value + ". 1 line ran";
 				}
