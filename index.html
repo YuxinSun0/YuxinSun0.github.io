@@ -1,6 +1,8 @@
 <!doctype html>
 <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
 <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+<script src="https://kihtrak.com/cloud_variable/cloudify.min.js"></script>
+
 <style>
     * {
         background-color: black;
@@ -15,6 +17,7 @@
 		<h1>this is Ysun website</h1>
 		<h1>you can get things here</h1>
 		<h3>made by yuxin sun and thomas j vuong</h3>
+		<h5>some of this cannot be ran offline</h5>
 	</head>
 	
 	<body>
@@ -34,6 +37,8 @@
 					document.getElementById("jsConsoleOutput").innerHTML = "ran " + document.getElementById("jsConsole").value + ". 1 line ran";
 				}
 			}
+			
+			var cloud_var = 0;
 		</script>
 		<p></p>
 		<h2>downloads:</h2>
