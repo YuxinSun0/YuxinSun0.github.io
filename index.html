@@ -44,12 +44,20 @@
 			var cloud_textMsg4;
 			var cloud_textMsg5;
 			
-			function textMsg() {
+			function sendTextMsg() {
 				cloud_textMsg = cloud_textMsg2;
 				cloud_textMsg2 = cloud_textMsg3;
 				cloud_textMsg3 = cloud_textMsg4;
 				cloud_textMsg4 = cloud_textMsg5;
-				cloud_textMsg5 = ;
+				cloud_textMsg5 = document.getElementById("textMsg").value;
+			}
+			
+			while (true) {
+				document.getElementById("msg").innerHTML = cloud_textMsg;
+				document.getElementById("msg2").innerHTML = cloud_textMsg2;
+				document.getElementById("msg3").innerHTML = cloud_textMsg3;
+				document.getElementById("msg4").innerHTML = cloud_textMsg4;
+				document.getElementById("msg5").innerHTML = cloud_textMsg5;
 			}
 		</script>
 		<p></p>
@@ -101,6 +109,15 @@ me and thomas have been doing modding and programming
 so if you got some good stuff that you can tell us about it
 dm me and friend me on discord my name and tag: Ysun #1057
 		</pre>
+		<p></p>
+		<p>text messaging(put your name pls)</p>
+		<p id="msg"></p>
+		<p id="msg2"></p>
+		<p id="msg3"></p>
+		<p id="msg4"></p>
+		<p id="msg5"></p>
+		<input id="textMsg">
+		<button onclick="sendTextMsg()">send</button>
 		<p></p>
 		<p>js console</p>
 		<input id="jsConsole">
