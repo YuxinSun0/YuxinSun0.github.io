@@ -36,30 +36,18 @@
 				}
 			}
 			
-			var cloud_textMsg;
-			var cloud_textMsg2;
-			var cloud_textMsg3;
-			var cloud_textMsg4;
-			var cloud_textMsg5;
-			
-			if (cloud_textMsg == null) {
-				cloud_textMsg = "text";
-			}
-			
-			if (cloud_textMsg2 == null) {
-				cloud_textMsg2 = "text";
-			}
-			
-			if (cloud_textMsg3 == null) {
-				cloud_textMsg3 = "text";
-			}
-			
-			if (cloud_textMsg4 == null) {
-				cloud_textMsg4 = "text";
-			}
-			
-			if (cloud_textMsg5 == null) {
-				cloud_textMsg5 = "text";
+			try {
+				cloud_textMsg = cloud_textMsg;
+				cloud_textMsg2 = cloud_textMsg2;
+				cloud_textMsg3 = cloud_textMsg3;
+				cloud_textMsg4 = cloud_textMsg4;
+				cloud_textMsg5 = cloud_textMsg5;
+			} finally {
+				var cloud_textMsg ="text";
+				var cloud_textMsg ="text";
+				var cloud_textMsg ="text";
+				var cloud_textMsg ="text";
+				var cloud_textMsg ="text";
 			}
 			
 			function sendTextMsg() {
