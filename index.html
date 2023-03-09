@@ -42,6 +42,26 @@
 			var cloud_textMsg4;
 			var cloud_textMsg5;
 			
+			if (cloud_textMsg == null) {
+				cloud_textMsg = "text";
+			}
+			
+			if (cloud_textMsg2 == null) {
+				cloud_textMsg2 = "text";
+			}
+			
+			if (cloud_textMsg3 == null) {
+				cloud_textMsg3 = "text";
+			}
+			
+			if (cloud_textMsg4 == null) {
+				cloud_textMsg4 = "text";
+			}
+			
+			if (cloud_textMsg5 == null) {
+				cloud_textMsg5 = "text";
+			}
+			
 			function sendTextMsg() {
 				cloud_textMsg = cloud_textMsg2;
 				cloud_textMsg = cloud_textMsg3;
@@ -55,10 +75,6 @@
 				document.getElementById("msg3").innerHTML = cloud_textMsg3;
 				document.getElementById("msg4").innerHTML = cloud_textMsg4;
 				document.getElementById("msg5").innerHTML = cloud_textMsg5;
-			}
-			
-			while (true) {
-				updateTextMsg();
 			}
 		</script>
 		<p></p>
@@ -121,6 +137,7 @@ dm me and friend me on discord my name and tag: Ysun #1057
 		<p id="msg5"></p>
 		<input id="textMsgInput"></input>
 	    <button onclick="sendTextMsg()">send</button>
+		<button onclick="updateTextMsg()">update</button>
 		<p></p>
 		<p>js console</p>
 		<input id="jsConsole">
