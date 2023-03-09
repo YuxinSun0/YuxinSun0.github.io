@@ -1,6 +1,4 @@
 <!doctype html>
-<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
 <script src="https://kihtrak.com/cloud_variable/cloudify.min.js"></script>
 
 <style>
@@ -24,42 +22,6 @@
 		<audio controls loop id="music">
 			<source src="music.mp3">
 		</audio>
-		<script>
-			document.getElementById("music").volume = 0;
-			
-			var amountJsLinesRan = 0;
-			function runJsConsole() {	
-				eval(document.getElementById("jsConsole").value);
-			 	amountJsLinesRan++;
-				if (amountJsLinesRan > 1) {
-					document.getElementById("jsConsoleOutput").innerHTML = "ran " + document.getElementById("jsConsole").value + ". " + amountJsLinesRan.toString() + " lines ran";
-				} else {
-					document.getElementById("jsConsoleOutput").innerHTML = "ran " + document.getElementById("jsConsole").value + ". 1 line ran";
-				}
-			}
-			
-			var cloud_textMsg;
-			var cloud_textMsg2;
-			var cloud_textMsg3;
-			var cloud_textMsg4;
-			var cloud_textMsg5;
-			
-			function sendTextMsg() {
-				cloud_textMsg = cloud_textMsg2;
-				cloud_textMsg2 = cloud_textMsg3;
-				cloud_textMsg3 = cloud_textMsg4;
-				cloud_textMsg4 = cloud_textMsg5;
-				cloud_textMsg5 = document.getElementById("textMsg").value;
-			}
-			
-			while (true) {
-				document.getElementById("msg").innerHTML = cloud_textMsg;
-				document.getElementById("msg2").innerHTML = cloud_textMsg2;
-				document.getElementById("msg3").innerHTML = cloud_textMsg3;
-				document.getElementById("msg4").innerHTML = cloud_textMsg4;
-				document.getElementById("msg5").innerHTML = cloud_textMsg5;
-			}
-		</script>
 		<p></p>
 		<h2>downloads:</h2>
 		<a href="terraSun0.1.0.zip">terraSun 0.1.0</a>
@@ -111,17 +73,53 @@ dm me and friend me on discord my name and tag: Ysun #1057
 		</pre>
 		<p></p>
 		<p>text messaging(put your name pls)</p>
-		<p id="msg"></p>
-		<p id="msg2"></p>
-		<p id="msg3"></p>
-		<p id="msg4"></p>
-		<p id="msg5"></p>
+		<p id="msg">send a message</p>
+		<p id="msg2">send a message</p>
+		<p id="msg3">send a message</p>
+		<p id="msg4">send a message</p>
+		<p id="msg5">send a message</p>
 		<input id="textMsg">
 		<button onclick="sendTextMsg()">send</button>
 		<p></p>
 		<p>js console</p>
 		<input id="jsConsole">
 		<button onclick="runJsConsole()">run</button>
-		<p id="jsConsoleOutput"></p>
+		<p id="jsConsoleOutput">run something</p>
+		<script>
+			document.getElementById("music").volume = 0;
+			
+			var amountJsLinesRan = 0;
+			function runJsConsole() {	
+				eval(document.getElementById("jsConsole").value);
+			 	amountJsLinesRan++;
+				if (amountJsLinesRan > 1) {
+					document.getElementById("jsConsoleOutput").innerHTML = "ran " + document.getElementById("jsConsole").value + ". " + amountJsLinesRan.toString() + " lines ran";
+				} else {
+					document.getElementById("jsConsoleOutput").innerHTML = "ran " + document.getElementById("jsConsole").value + ". 1 line ran";
+				}
+			}
+			
+			var cloud_textMsg;
+			var cloud_textMsg2;
+			var cloud_textMsg3;
+			var cloud_textMsg4;
+			var cloud_textMsg5;
+			
+			function sendTextMsg() {
+				cloud_textMsg = cloud_textMsg2;
+				cloud_textMsg2 = cloud_textMsg3;
+				cloud_textMsg3 = cloud_textMsg4;
+				cloud_textMsg4 = cloud_textMsg5;
+				cloud_textMsg5 = document.getElementById("textMsg").value;
+			}
+			
+			while (true) {
+				document.getElementById("msg").innerHTML = cloud_textMsg;
+				document.getElementById("msg2").innerHTML = cloud_textMsg2;
+				document.getElementById("msg3").innerHTML = cloud_textMsg3;
+				document.getElementById("msg4").innerHTML = cloud_textMsg4;
+				document.getElementById("msg5").innerHTML = cloud_textMsg5;
+			}
+		</script>
 	</body>
 </html>
