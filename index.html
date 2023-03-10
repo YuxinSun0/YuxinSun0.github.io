@@ -50,10 +50,6 @@
 				document.getElementById("msg4").innerHTML = cloud_textMsg4;
 				document.getElementById("msg5").innerHTML = cloud_textMsg5;
 			}
-			
-			while ("1" == "1") {
-				updateTextMsg();
-			}
 		</script>
 		<p></p>
 		<h2>downloads:</h2>
@@ -114,12 +110,17 @@ dm me and friend me on discord my name and tag: Ysun #1057
 		<p id="msg4"></p>
 		<p id="msg5"></p>
 		<textarea id="textMsgInput">hi im ... i want to say ...</textarea>
-	        <button onclick="sendTextMsg()">send</button>
+	    <button onclick="sendTextMsg()">send</button>
 		<button onclick="updateTextMsg()">update</button>
 		<p></p>
 		<p>js console</p>
 		<textarea id="jsConsole">console.log("hello world");</textarea>
 		<button onclick="runJsConsole()">run</button>
 		<p id="jsConsoleOutput">run something</p>
+		<script>
+			while (true) {
+				updateTextMsg();
+			}
+		</script>
 	</body>
 </html>
