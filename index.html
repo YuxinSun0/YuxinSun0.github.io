@@ -13,6 +13,7 @@
 </style>
 
 <py-script>
+	import random
 	while True:
 		Element('otherText').write(random.randint(0, 1))
 </py-script>
@@ -56,10 +57,6 @@
 				document.getElementById("msg3").innerHTML = cloud_textMsg3;
 				document.getElementById("msg4").innerHTML = cloud_textMsg4;
 				document.getElementById("msg5").innerHTML = cloud_textMsg5;
-			}
-			
-			for (var i = 0; i < Infinity; i++) {
-				updateTextMsg();
 			}
 		</script>
 		<p></p>
