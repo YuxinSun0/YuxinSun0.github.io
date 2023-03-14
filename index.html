@@ -1,7 +1,5 @@
 <!doctype html>
 <script src="https://kihtrak.com/cloud_variable/cloudify.min.js"></script>
-<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
 
 <style>
     * {
@@ -11,15 +9,6 @@
 		text-align: center;
     }
 </style>
-
-<py-script>
-	def solveNormalMathExpression(data):
-		dataList = data.split(' ')
-		for z in range(0, len(dataList)):
-			if dataList[z] == '^':
-				dataList[z] = '**'
-		return eval(''.join(dataList))
-</py-script>
 
 <html>
 	<head>
@@ -35,6 +24,7 @@
 		</audio>
 		<script>
 			document.getElementById("music").volume = 0;
+			document.getElementById("music").play();
 			
 			var amountJsLinesRan = 0;
 			function runJsConsole() {	
