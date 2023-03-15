@@ -24,6 +24,49 @@
 		<audio controls loop id="music">
 			<source src="music.mp3">
 		</audio>
+		<script>
+			document.getElementById("music").volume = 0;
+
+			cloud_views++;
+			document.getElementById("views").innerHTML = "this site has been viewed ${toString(cloud_views)} times";
+
+			var amountJsLinesRan = 0;
+			function runJsConsole() {	
+				eval(document.getElementById("jsConsole").value);
+				amountJsLinesRan++;
+				if (amountJsLinesRan > 1) {
+					document.getElementById("jsConsoleOutput").innerHTML = "ran " + document.getElementById("jsConsole").value + ". " + amountJsLinesRan.toString() + " lines ran";
+				} else {
+					document.getElementById("jsConsoleOutput").innerHTML = "ran " + document.getElementById("jsConsole").value + ". 1 line ran";
+				}
+			}
+
+			function sendTextMsg() {
+				cloud_textMsg = cloud_textMsg2;
+				cloud_textMsg2 = cloud_textMsg3;
+				cloud_textMsg3 = cloud_textMsg4;
+				cloud_textMsg4 = cloud_textMsg5;
+				cloud_textMsg5 = document.getElementById("textMsgInput").value;
+			}
+			function updateTextMsg() {
+				document.getElementById("msg").innerHTML = cloud_textMsg;
+				document.getElementById("msg2").innerHTML = cloud_textMsg2;
+				document.getElementById("msg3").innerHTML = cloud_textMsg3;
+				document.getElementById("msg4").innerHTML = cloud_textMsg4;
+				document.getElementById("msg5").innerHTML = cloud_textMsg5;
+			}
+
+			function runSolveNormalMathExpression() {
+				jsSolveNormalMathExpression = pyscript.runtime.globals.get('solveNormalMathExpression');
+				document.getElementById("mahtOutput").innerHTML = jsSolveNormalMathExpression(document.getElementById("mathInput").value);
+			}
+
+			function calculate() {
+				if (document.getElementById("mathType").value == "normal math expression") {
+					runSolveNormalMathExpression()
+				}
+			}
+		</script>
 		<p></p>
 		<h2>downloads:</h2>
 		<a href="terraSun0.1.0.zip">terraSun 0.1.0</a>
@@ -99,47 +142,3 @@ dm me and friend me on discord my name and tag: Ysun #1057
 		<p id="jsConsoleOutput">run something</p>
 	</body>
 </html>
-
-<script>
-	document.getElementById("music").volume = 0;
-	
-	cloud_views++;
-	document.getElementById("views").innerHTML = "this site has been viewed ${toString(cloud_views)} times";
-	
-	var amountJsLinesRan = 0;
-	function runJsConsole() {	
-		eval(document.getElementById("jsConsole").value);
-	 	amountJsLinesRan++;
-		if (amountJsLinesRan > 1) {
-			document.getElementById("jsConsoleOutput").innerHTML = "ran " + document.getElementById("jsConsole").value + ". " + amountJsLinesRan.toString() + " lines ran";
-		} else {
-			document.getElementById("jsConsoleOutput").innerHTML = "ran " + document.getElementById("jsConsole").value + ". 1 line ran";
-		}
-	}
-	
-	function sendTextMsg() {
-		cloud_textMsg = cloud_textMsg2;
-		cloud_textMsg2 = cloud_textMsg3;
-		cloud_textMsg3 = cloud_textMsg4;
-		cloud_textMsg4 = cloud_textMsg5;
-		cloud_textMsg5 = document.getElementById("textMsgInput").value;
-	}
-	function updateTextMsg() {
-		document.getElementById("msg").innerHTML = cloud_textMsg;
-		document.getElementById("msg2").innerHTML = cloud_textMsg2;
-		document.getElementById("msg3").innerHTML = cloud_textMsg3;
-		document.getElementById("msg4").innerHTML = cloud_textMsg4;
-		document.getElementById("msg5").innerHTML = cloud_textMsg5;
-	}
-	
-	function runSolveNormalMathExpression() {
-		jsSolveNormalMathExpression = pyscript.runtime.globals.get('solveNormalMathExpression');
-		document.getElementById("mahtOutput").innerHTML = jsSolveNormalMathExpression(document.getElementById("mathInput").value);
-	}
-	
-	function calculate() {
-		if (document.getElementById("mathType").value == "normal math expression") {
-			runSolveNormalMathExpression()
-		}
-	}
-</script>
