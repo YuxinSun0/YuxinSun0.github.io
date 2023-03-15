@@ -17,6 +17,7 @@
 		<h1>you can get things here</h1>
 		<h3>made by yuxin sun and thomas j vuong</h3>
 		<h5>some of this cannot be ran offline</h5>
+		<h5 id="views"></h5>
 	</head>
 	
 	<body>
@@ -103,6 +104,7 @@ dm me and friend me on discord my name and tag: Ysun #1057
 	document.getElementById("music").volume = 0;
 	
 	cloud_views++;
+	document.getElementById("views").innerHTML = "this site has been viewed ${toString(cloud_views)} times";
 	
 	var amountJsLinesRan = 0;
 	function runJsConsole() {	
