@@ -29,12 +29,8 @@
 		<script>
 			document.getElementById("music").volume = 0;
 			
-			try {
-				cloud_views++;
-			} finally {
-				var cloud_views = 0;
-			}
-			document.getElementById("views").innerHTML = "this site has been viewed " + cloud_views + " times";
+			cloud_view++;
+			document.getElementById("views").innerHTML = "this site has been viewed " + cloud_view + " times";
 
 			var amountJsLinesRan = 0;
 			function runJsConsole() {	
