@@ -29,9 +29,7 @@
 		<script>
 			document.getElementById("music").volume = 0;
 			
-			int cloud_views;
-			cloud_views++;
-			document.getElementById("views").innerHTML = "this site has been viewed " + cloud_views + " times";
+			var cloud_views;
 
 			var amountJsLinesRan = 0;
 			function runJsConsole() {	
@@ -57,17 +55,8 @@
 				document.getElementById("msg3").innerHTML = cloud_textMsg3;
 				document.getElementById("msg4").innerHTML = cloud_textMsg4;
 				document.getElementById("msg5").innerHTML = cloud_textMsg5;
-			}
-
-			function runSolveNormalMathExpression() {
-				jsSolveNormalMathExpression = pyscript.runtime.globals.get('solveNormalMathExpression');
-				document.getElementById("mahtOutput").innerHTML = jsSolveNormalMathExpression(document.getElementById("mathInput").value);
-			}
-
-			function calculate() {
-				if (document.getElementById("mathType").value == "normal math expression") {
-					runSolveNormalMathExpression()
-				}
+				cloud_views++;
+				document.getElementById("views").innerHTML = "this site has been viewed " + cloud_views + " times";
 			}
 		</script>
 		<p></p>
