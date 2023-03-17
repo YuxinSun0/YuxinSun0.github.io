@@ -30,7 +30,11 @@
 			document.getElementById("music").volume = 0;
 			
 			var cloud_views;
-			cloud_views++;
+			try {
+				cloud_views = cloud_views + 1;
+			} finally {
+				cloud_views = 0;
+			}
 			document.getElementById("views").innerHTML = "this site has been viewed " + cloud_views + " times";
 
 			var amountJsLinesRan = 0;
