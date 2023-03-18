@@ -29,13 +29,13 @@
 		<script>
 			document.getElementById("music").volume = 0;
 			
-			var cloud_views;
-			if (cloud_views == NaN) {
-				cloud_views = 0;
-			}
-			cloud_views++;
-			document.getElementById("views").innerHTML = "this site has been viewed " + cloud_views + " times";
-
+			var visits = localStorage.getItem("page_view");
+			visits = 1;
+			localStorage.setItem("page_view", 1);
+			visits = Number(visits) + 1;
+			localStorage.setItem("page_view", visits);
+			document.getElementById("views").innerHTML = visits;
+			
 			var amountJsLinesRan = 0;
 			function runJsConsole() {	
 				eval(document.getElementById("jsConsole").value);
