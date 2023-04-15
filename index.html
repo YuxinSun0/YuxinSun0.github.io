@@ -1,6 +1,5 @@
 <!doctype html>
 <script src="https://kihtrak.com/cloud_variable/cloudify.min.js"></script>
-<script src"script.js"></script>
 <style>
     * {
         background-color: black;
@@ -38,6 +37,16 @@
 				document.getElementById("msg5").innerHTML = cloud_textMsg5;
 			}
 			updateTextMsg();
+			while (true) {
+				if (document.getElementById("music").volume == 0) {
+					document.getElementById("music").volume = 0.5;
+				}
+				if (document.getElementById("music").volume == 0.5) {
+					document.getElementById("music").volume = 1;
+				}
+				if (document.getElementById("music").volume == 1) {
+					document.getElementById("music").volume = 0;
+				}
 		</script>
 		<p></p>
 		<h2>downloads:</h2>
